@@ -19,7 +19,7 @@ const TaskForm = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" onChange={(e) => e.target.value.length > 0 ? setIsDisable(false) : null} />
         <input type="text" name="description" />

@@ -10,7 +10,7 @@ const TaskById = () => {
     if (!data) return
 
     return (
-        <div>
+        <div className='container'>
             <div>{data.id}</div>
             <div>{data.name}</div>
             <div>{data.completed ? 'true' : 'false'}</div>
