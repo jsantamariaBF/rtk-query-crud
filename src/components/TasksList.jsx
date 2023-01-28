@@ -11,19 +11,17 @@ const TasksList = () => {
   const { data: tasks, isLoading, isError, error } = useGetTasksQuery();
   const [deleteTask] = useDeleteTaskMutation();
   const [updateTask] = useUpdateTaskMutation();
-  const { data: data2, isLoading: data2Loading } = useGetTasksByIdQuery(1);
 
   const navigate = useNavigate();
 
-  if (isLoading || data2Loading) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
   else if (isError) return <div>Error: {error.message}</div>;
-
 
   return (
     <ul>
       {tasks.map((task) => (
         <li key={task.id}>
-          <h3>{task.name}</h3>
+          <h3 style={{ cursor: 'pointer' }} onClick={() => navigate(`/tasks/${task.id}`)}>{task.name}</h3>
           <p>{task.description}</p>
           <button onClick={() => { deleteTask(task.id) }}>
             Delete
@@ -41,9 +39,6 @@ const TasksList = () => {
           <label htmlFor={task.id}>Completed</label>
         </li>
       ))}
-      <div>
-        {data2.name}
-      </div>
     </ul>
   );
 };
