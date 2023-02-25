@@ -9,7 +9,7 @@
     {
       "name": "test",
       "description": "",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
@@ -25,9 +25,9 @@
       "id": 4
     },
     {
-      "name": "new test",
-      "description": "test",
-      "completed": false,
+      "name": "test",
+      "description": "new",
+      "completed": true,
       "id": 5
     }
   ]

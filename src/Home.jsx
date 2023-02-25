@@ -8,9 +8,10 @@ const Home = () => {
         <div className="container">
             <div>I am Home</div>
             <button onClick={() => navigate('/tasks')}>Go to tasks</button>
-            <button>Go to create task</button>
+            <button onClick={() => navigate('/form')}>Go to create task</button>
         </div>
     )
 }
+
 
 export default Home;
